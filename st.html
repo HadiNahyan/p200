@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>typing car- Game of typing</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+
+<body style="overflow: hidden;">
+  <div class="fp" id="fp">
+    <p style="color: rgb(0, 196, 245); font-family:Impact;font-size: 70px;background-color: white; opacity: 80%; width: 350px;position: relative;
+       left: 44%; top: 280px;"> Type Racing </p>
+    <p style="background-color: aqua; opacity:79%;font-size: 36px;width: 580px; font-family: cursive; position: relative;left: 38%; 
+        top: 290px;border: 5px solid black;border-style: double;">A Typing game by Nahyan & Nadia</p>
+    <button type="button" id="button"
+      style="background-color: rgb(165, 221, 223); position: relative;left: 47%; top: 300px;width: 200px;font-size: 20px;">Click
+      Here To Play</button>
+  </div>
+  <div class="back">
+    <audio controls autoplay>
+     <!-- <source src="horse.ogg" type="audio/ogg">-->
+      <source src="Gari Chole Naa.mp3" type="audio/mp3">
+    </audio>
+    
+    <center><br>
+      <h4> Type Racing </h4>
+      <br>
+    </center>
+  </div>
+  <div class="road">
+  </div>
+  <div class="city"></div>
+  <div class="car">
+    <img src="gari.png" id=car>
+
+  </div>
+  <div class="wheel">
+    <img src="chakka.png" class="b-wheel">
+    <img src="chakka.png" class="f-wheel">
+  </div>
+  <div class="car2" id="car2">
+    <img src="loading.gif" id='car2Anim'>
+  </div>
+
+  <script>
+    const targetDiv = document.getElementById("fp");
+    const btn = document.getElementById("button");
+    btn.onclick = function () {
+      if (targetDiv.style.display !== "none") {
+        targetDiv.style.display = "none";
+      } else {
+        targetDiv.style.display = "block";
+      }
+    };
+
+    document.onkeydown = function(evt) {
+      console.log(window.event);
+
+      console.log(evt);
+    evt = evt || window.event;
+    if (evt.keyCode == 13) {
+      document.getElementById('car2Anim').style.animation = 'car2 12s linear 1';
+      setTimeout(function(){
+        document.getElementById('car2Anim').style.animation = "" ;
+      },7500);
+    }
+};
+
+  </script>
+</body>
+</html>

@@ -3,30 +3,65 @@
     margin: 0;
     padding: 0;
 }
+.fp
+{
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-image: url(frontpg.png);
+    background-size: auto;
+    background-position: bottom;
+    position: absolute;
+    overflow: hidden;
+    z-index: 6;
+}
+h4{
+    color: rgb(255, 255, 255); 
+    width: 300px;
+    height: 90%;
+    font-family: Verdana;
+background-color: rgb(13, 13, 14);
+opacity: 60%;
+    border: 5px solid rgb(255, 255, 255) ; 
+    border-style: dotted;
+    font-size: 50px;
+}
+audio
+{
+    width: 102px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    bottom: 14vh;
+    z-index: 4;
+    left: 30vh;
+    opacity: 40%;
+    transform: rotate(6deg);
+}
+
 .back
 { 
     height: 100vh;
     width: 100%;
-    background-image: url(https://drive.google.com/uc?id=1tfTjEhzMhQ5xqI43F_rj9vAd6EgUSxr5);
+    background-image: url(wal.jpg);
     background-size: cover;
     background-position: center;
-    position: relative;
-    overflow-x: hidden;
+    position: absolute;
+    overflow: hidden;
 }
 .road
 {
     height: 200px;
     width: 500%;
     display: block;
-    background-image: url(https://drive.google.com/uc?id=1XEJLq9l-YU-FrcnPBJPhHXgI7PGINRPT);
+    background-image: url(road.jpg);
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
     background-repeat: repeat-x;
-    animation: road 7s linear infinite;
-        
+    animation: road 5.5s linear infinite;   
 }
 @keyframes road
 {
@@ -38,7 +73,7 @@
 {
     height: 250px;
     width: 500%;
-    background-image: url(https://drive.google.com/uc?id=1YlLTJGSxuXoo-_gI5gYhE8fq8_8K2Sxn);
+    background-image: url(city.png);
     position: absolute;
     bottom: 200px;
     left: 0;
@@ -60,7 +95,7 @@
     position: absolute;
     bottom: 10px;
     left: 6%;
-    z-index:1;
+    z-index:3;
 }
 .car img
 {
@@ -82,28 +117,58 @@
 .wheel
 { 
     left: 12%;
-    bottom: 125px;
+    bottom: 130px;
     transform: translateX(-30%);
         position: absolute;
-    z-index: 1;
+    z-index: 3;
         
 }
 .wheel img
 {
     width:120px;
     height: 120px;
-    animation: wheel .5s linear infinite;
+    animation: wheel .4s linear infinite;
 }
 .b-wheel{
-    left:-100px;
+    left:-102px;
         position: absolute;
 }
 .f-wheel{
-    left: 222px;
+    left: 225px;
         position: absolute;
 }
 @keyframes wheel{
     100%{
         transform: rotate(360deg);
+    }
+}
+
+.car2
+{
+    width: 100%;
+    position: absolute;
+    bottom: 45px;
+    left: 100%;
+    z-index:2;
+}
+
+.car2 img
+{
+    height: 245px;
+    width: 25%;
+    filter: drop-shadow(0em 2em 2em black);
+}
+
+@keyframes car2
+{
+    0%{
+        
+    
+      transform: translateX(200px);
+    }
+
+    100%{
+      
+        transform: translateX(-4000px);
     }
 }
