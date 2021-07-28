@@ -18,20 +18,24 @@
   </div>
   <div class="back">
     <audio controls autoplay>
-     <!-- <source src="horse.ogg" type="audio/ogg">-->
+      <!-- <source src="horse.ogg" type="audio/ogg">-->
       <source src="Gari Chole Naa.mp3" type="audio/mp3">
     </audio>
-    
+
     <center><br>
       <h4> Type Racing </h4>
       <br>
+      <div class="wordsWrap">
+        <p class="words"></p>
+      </div>
     </center>
   </div>
+  
   <div class="road">
   </div>
   <div class="city"></div>
-  <div class="car">
-    <img src="gari.png" id=car>
+  <div class="car" id="myCar">
+    <img src="gari.png">
 
   </div>
   <div class="wheel">
@@ -39,33 +43,14 @@
     <img src="chakka.png" class="f-wheel">
   </div>
   <div class="car2" id="car2">
-    <img src="loading.gif" id='car2Anim'>
+    <img src="giphy (2).gif" id='car2Anim'>
+  </div>
+  <div class="car3" id="car3">
+    <img src="giphy (1).gif" id='car3Anim'>
   </div>
 
-  <script>
-    const targetDiv = document.getElementById("fp");
-    const btn = document.getElementById("button");
-    btn.onclick = function () {
-      if (targetDiv.style.display !== "none") {
-        targetDiv.style.display = "none";
-      } else {
-        targetDiv.style.display = "block";
-      }
-    };
+  <script src="scirpt.js"></script>
 
-    document.onkeydown = function(evt) {
-      console.log(window.event);
-
-      console.log(evt);
-    evt = evt || window.event;
-    if (evt.keyCode == 13) {
-      document.getElementById('car2Anim').style.animation = 'car2 12s linear 1';
-      setTimeout(function(){
-        document.getElementById('car2Anim').style.animation = "" ;
-      },7500);
-    }
-};
-
-  </script>
 </body>
+
 </html>
