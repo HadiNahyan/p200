@@ -1,18 +1,23 @@
 const targetDiv = document.getElementById("fp");
 const btn = document.getElementById("button");
 var words = document.querySelector(".words");
+var c = document.getElementById("bgMusic"); 
+function playAudio() { 
+  c.play(); 
+} 
+
+function pauseAudio() { 
+  c.pause(); 
+} 
 var spans;
 var typed;
 var passedCar = 0;
 var currentWord = '';
 var checkingIndex = 0;
-
-var carPaddings = ['2%','3%','4%','5%','6%', '7%', '8%', '9%', '10%','11%','12%','13%', '14%', '15%', '16%','17%','18%','19%','20%','21%','22%','23%','24%','25%','26%','27%','28%','29%','30%','31%',
-'32%','33%','34%','35%','36%','37%','38%','39%','40%','41%','42%','43%','44%','45%','46%','47%','48%','49%','50%','51%','52%','53%','54%','55%','56%','57%','58%','59%','60%','61%',
-'62%','63%','64%','65%','66%','67%','68%','69%','70%','71%','72%','73%','74%','75%'];
-var wheelPadding = ['8%', '9%', '10%','11%','12%', '13%', '14%', '15%', '16%','17%','18%','19%','20%','21%','22%','23%','24%','25%','26%','27%','28%','29%','30%','31%',
-'32%','33%','34%','35%','36%','37%','38%','39%','40%','41%','42%','43%','44%','45%','46%','47%','48%','49%','50%','51%','52%','53%','54%','55%','56%','57%','58%','59%','60%','61%',
-'62%','63%','64%','65%','66%','67%','68%','69%','70%','71%','72%','73%','74%','75%','76%','77%','78%','79%','80%','81%'];
+var carPaddings = ['2%','3%','4%','11%','12%','16%','17%','21%','22%','26%','27%','31%',
+'32%','36%','37%','41%','42%','46%','47%','51%','52%','56%','57%','61%','62%','66%','67%','71%','72%','73%','74%','75%'];
+var wheelPadding = ['8%', '9%', '10%','17%','18%','22%','23%','27%','28%','32%','33%','37%','38%','42%','43%','47%','48%','52%','53%','57%','58%','62%','63%',
+'67%','68%','72%','73%','77%','78%','79%','80%','81%'];
 
 
 btn.onclick = function () {
@@ -21,6 +26,11 @@ btn.onclick = function () {
   } else {
     targetDiv.style.display = "block";
   }
+  var a = document.getElementById("crStrt"); 
+  a.play();
+  var b = document.getElementById("garir"); 
+  b.play();
+  c.play();
   showWord();
 };
 
@@ -32,6 +42,10 @@ function typing(e) {
     checkingIndex++;
   } else {
     passedCar -= 1;
+    var d = document.getElementById("wrong"); 
+    d.play();
+    var e = document.getElementById("brake"); 
+  e.play();
     if (passedCar < 0) {
       passedCar = 0;
     }
@@ -42,6 +56,10 @@ function typing(e) {
   if (checkingIndex === spans.length) {
     document.removeEventListener("keydown", typing, false);
     passedCar += 1;
+    var f = document.getElementById("right"); 
+    f.play();
+    var g = document.getElementById("speed"); 
+  g.play();
     if(passedCar == carPaddings.length){
       passedCar -= 1;
     }
@@ -60,10 +78,16 @@ function typing(e) {
 function moveCar(passedCar) {
  
   var myCar = document.getElementsByClassName('car')[0];
-  myCar.style["left"] = carPaddings[passedCar];
-
+  setInterval(cAnim,40);
   var myWheel = document.getElementsByClassName('wheel')[0];
-  myWheel.style["left"] = wheelPadding[passedCar];
+   setInterval(wAnim,40);
+
+}
+function cAnim(){
+  document.getElementById("myCar").style.left =carPaddings[passedCar];
+}
+function wAnim(){
+ document.getElementById("caka").style.left = wheelPadding[passedCar];
 }
 
 document.addEventListener("keydown", typing, false);
