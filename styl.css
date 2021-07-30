@@ -101,27 +101,27 @@ audio
     z-index:3;
 }
 .car img
-{
+{  height:258px ;
     width: 25%;
-    animation: car 2s linear infinite;
+    animation: car 1s linear infinite;
 }
 @keyframes car
 {
     100%{
-        transform: translateY(-2px)
+        transform: translateY(-2px);
     }
     50%{
-        transform: translateY(1px)
+        transform: translateY(1px);
+     
     }
-    100%{
-        transform: translateY(-2px)
+    00%{
+        transform: translateY(-2px);
     }
 }
 .wheel
-{ 
+{  
     left: 8%;
-    bottom: 130px;
-    transform: translateX(-30%);
+    bottom: 125px;
     position: absolute;
     z-index: 3;
         
@@ -145,12 +145,10 @@ audio
         transform: rotate(360deg);
     }
 }
-
 .car2
 {
-    width: 56%;
-    height: 29%;
     position: absolute;
+    width: 56%;
     bottom: 90px;
     left: 22%;
     z-index: 2;
@@ -161,13 +159,31 @@ audio
     height: 265px;
     width: 27%;
     filter: drop-shadow(0em 2em 2em black);
+    animation: car2 4s linear infinite;
 }
+@keyframes car2
+{
+    100%{
+        transform: translateY(-2px);
+        transform: translateX(20px);
+    }
+    50%{
+       
+        transform: translateY(0px);
+        transform: translateX(0px);
+    } 
+    
+    00%{
+        transform: translateY(-2px);
+        transform: translateX(20px);
+    }
+}
+
 .car3
 {
-    width: 120%;
-    height: 102%;
     position: absolute;
-    bottom: -57%;
+    width: 109%;
+    bottom: 17px;
     left: 66%;
     z-index: 2;
 
@@ -175,10 +191,29 @@ audio
 
 .car3 img
 {
-       height: 400px;
+    height: 400px;
     width: 18%;
     filter: drop-shadow(0em 2em 2em black);
+    animation: car3 8s linear infinite;
 }
+@keyframes car3
+{
+    100%{
+        transform: translateY(-2px);
+        transform: translateX(-12px);
+    }
+    50%{
+       
+        transform: translateY(0px);
+        transform: translateX(00px);
+    } 
+    
+    00%{
+        transform: translateY(-2px);
+        transform: translateX(-12px);
+    }
+}
+
 
 
 .car4
@@ -194,7 +229,26 @@ audio
   width: 27%;
   height: 490px;
   filter: drop-shadow(0em 2em 2em black);
+  animation: car4 5s linear infinite;
 }
+@keyframes car4
+{
+    100%{
+        transform: translateY(-2px);
+        transform: translateX(15px);
+    }
+    50%{
+       
+        transform: translateY(0px);
+        transform: translateX(00px);
+    } 
+    
+    00%{
+        transform: translateY(-2px);
+        transform: translateX(15px);
+    }
+}
+
 
 
 .wordsWrap {
@@ -208,5 +262,5 @@ audio
 }
 
 .bg {
-	background-color: #04AF71;
+	background-color: #06d622;
 }

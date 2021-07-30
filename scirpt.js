@@ -23,7 +23,8 @@ var wheelPadding = ['8%', '9%', '10%','17%','18%','22%','23%','27%','28%','32%',
 btn.onclick = function () {
   if (targetDiv.style.display !== "none") {
     targetDiv.style.display = "none";
-  } else {
+  } 
+  else {
     targetDiv.style.display = "block";
   }
   var a = document.getElementById("crStrt"); 
@@ -78,16 +79,18 @@ function typing(e) {
 function moveCar(passedCar) {
  
   var myCar = document.getElementsByClassName('car')[0];
-  setInterval(cAnim,40);
+ setInterval(cAnim,40);
   var myWheel = document.getElementsByClassName('wheel')[0];
-   setInterval(wAnim,40);
+  setInterval(wAnim,40);
 
 }
 function cAnim(){
-  document.getElementById("myCar").style.left =carPaddings[passedCar];
+  document.getElementById("myCar").style.left=carPaddings[passedCar];
+  document.getElementById("myCar").style.transition = "all 2s";
 }
 function wAnim(){
  document.getElementById("caka").style.left = wheelPadding[passedCar];
+ document.getElementById("caka").style.transition = "all 2s";
 }
 
 document.addEventListener("keydown", typing, false);
