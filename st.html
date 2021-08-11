@@ -1,76 +1,113 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>typing car- Game of typing</title>
-  <link rel="stylesheet" href="styl.css">
-</head>
-<body style="overflow: hidden;">
-  <div class="fp" id="fp">
-    <p style="color: rgb(0, 196, 245); font-family:Impact;font-size: 70px;background-color: white; opacity: 80%; width: 350px;position: relative;
-       left: 44%; top: 280px;"> Type Racing </p>
-    <p style="background-color: aqua; opacity:79%;font-size: 36px;width: 580px; font-family: cursive; position: relative;left: 38%; 
-        top: 290px;border: 5px solid black;border-style: double;">A Typing game by Nahyan & Nadia</p>
-    <button type="button" id="button"
-      style="background-color: rgb(165, 221, 223); position: relative;left: 47%; top: 300px;width: 200px;font-size: 20px;">Click
-      Here To Play</button>
-  </div>
-  <div class="back">
-    <button onclick="playAudio()" type="button"style="background-color:#ffffff;; position: relative;left: 12%; top:12px;width:85px;font-size: 15px; z-index: 6;opacity: 40%;" >Play Music</button>
-    <button onclick="pauseAudio()" type="button"style="background-color:#ffffff;; position: relative;left: 12%; top:13px;width:90px;font-size:15px;z-index: 6;opacity: 40%;">Pause Music</button> 
-    <audio controls autoplay>
-      <source src="Gari Chole Naa.mp3" type="audio/mp3">
-    </audio>
-    <audio id="right">
-      <source src="right.mp3" type="audio/mp3">
-    </audio>
-    <audio id="wrong">
-      <source src="wrong.mp3" type="audio/mp3">
-    </audio>
-    <audio id="bgMusic">
-      <source src="bcgMusic.mp3" type="audio/mp3">
-    </audio>
-    <audio id="speed">
-      <source src="speed.mp3" type="audio/mp3">
-    </audio>
-    <audio id="brake">
-      <source src="brake.mp3" type="audio/mp3">
-    </audio>
-    <audio id="garir">
-      <source src="carSnd.mp3" type="audio/mp3">
-    </audio>
-    <audio id="crStrt">
-      <source src="gariStart.mp3" type="audio/mp3">
-    </audio>
-    <center><br>
-      <h4> Type Racing </h4>
-      <br>
-      <div class="wordsWrap">
-        <p class="words"></p>
-      </div>
-    </center>
-  </div>
-  <div class="road">
-  </div>
-  <div class="city"></div>
-  <div class="car" id="myCar">
-    <img src="gari.png">
-  </div>
-  <div class="wheel" id="caka">
-    <img src="chakka.png" class="b-wheel">
-    <img src="chakka.png" class="f-wheel">
-  </div>
-  <div class="car2" id="car2">
-    <img src="giphy (3).gif" id='car2Anim'>
-  </div>
-  <div class="car3" id="car3">
-    <img src="giphy (2).gif" id='car3Anim'>
-  </div>
-  <div class="car4" id="car4">
-    <img src="giphy (1).gif" id='car2Anim'>
-  </div>
-  <script src="scirpt.js"></script>
+  <head>
+    <title>typing car Racing-</title>
+    <link rel="stylesheet" href="styl.css">
+  </head>
 
-</body>
+  <body style="overflow: hidden;">
+    <div class="fp" id="fp">
+      <p class="gName">> Typing Race <</p>
+          <p class="devoloper"> A Typing Game By Nahyan & Nadia </p>
+          <p class="diff"> Select Difficulty To Play </p>
+          <button type="button" class="btn1" id="easy">Easy</button>
+          <button type="button" id="normal" class="btn2">Normal</button>
+          <button type="button" id="hard" class="btn3">Hard</button>
+        </div>
+        <div class="back">
+          <img onclick="playAudio()" type="button" style="position: relative;left: 10%; top:10px;width:60px;z-index: 6;"src="musicLo.png" title="Play Music"></img>
+        <img onclick="pauseAudio()" type="button" style="position:relative;left: 10%; top:10px;width:60px;z-index: 6;"src="stMusic.png" title="Pause Music"></img>
+      <audio id="right">
+        <source src="right.mp3" type="audio/mp3">
+      </audio>
+      <audio id="wrong">
+        <source src="wrong.mp3" type="audio/mp3">
+      </audio>
+      <audio id="bgMusic" loop="true">
+        <source src="bcgMusic.mp3" type="audio/mp3">
+      </audio>
+      <audio id="speed">
+        <source src="speed.mp3" type="audio/mp3">
+      </audio>
+      <audio id="brake">
+        <source src="brake.mp3" type="audio/mp3">
+      </audio>
+      <audio id="garir" loop="true">
+        <source src="carSnd.mp3" type="audio/mp3">
+      </audio>
+      <audio id="crStrt">
+        <source src="gariStart.mp3" type="audio/mp3">
+      </audio>
+      <audio id="L10s">
+        <source src="After Effect - Countdown 10 seconds.mp3" type="audio/mp3">
+      </audio>
+      <audio id="won">
+        <source src="won.mp3" type="audio/mp3">
+      </audio>
+      <audio id="lost">
+        <source src="lost.mp3" type="audio/mp3">
+      </audio>
+      <audio id="kPres">
+        <source src="press2.mp3" type="audio/mp3">
+      </audio>
+      
+      <center>
+        <br>
+        <h4>
+          Typing Race
+        </h4>
+        <br>
+        <div class="wordsWrap">
+          <p class="words"></p>
+        </div>
+        <div class="score" id="score">
+          <p class="scr" id="scr"></p>
+        </div>
+      </center>
 
-</html>
+      <p class="playerScore"> Score: 0 </p>
+      <p class="timer">Time left: <span class="time">sec</span></p>
+    </div>
+    <div class="road">
+    </div>
+    <div class="city"></div>
+    <div class="car" id="myCar">
+      <img src="gari.png">
+    </div>
+    <div class="wheel" id="caka">
+      <img src="chakka.png" class="b-wheel">
+      <img src="chakka.png" class="f-wheel">
+    </div>
+    <div class="car2" id="car2">
+      <img src="giphy (3).gif" id='car2Anim'>
+    </div>
+    <div class="car3" id="car3">
+      <img src="giphy (2).gif" id='car3Anim'>
+    </div>
+    <div class="bike" id="bike">
+      <img src="bike.gif">
+    </div>
+    <div class="car4" id="car4">
+      <img src="giphy (1).gif" id='car2Anim'>
+    </div>
+    <div class="Lp" id="Lp">
+      <p class="endGamename"> Typing Race </p>
+      <p class="res" id="res"> You Won!!! </p>
+      <p class="gameOver">> Game Over!! << /p>
+      <p id="msg" class="scor">Your Score</p>
+      <p class="dificulty"> Select Difficulty To Play Again </p>
+      <button type="button" id="easy2" class="btn4">Easy</button>
+      <button type="button" id="normal2" class="btn5">Normal</button>
+      <button type="button" id="hard2" class="btn6">Hard</button>
+    </div>
+    <div class="ballon"><img src="air_balloon_PNG19387.png" class="fLine">
+      <p class="wLeft" id=wLeft> Word Left- 31</p>
+    </div>
+
+    <script src="scirpt.js"></script>
+    <script src="allWords.js"></script>
+
+      </body>
+
+    </html>
