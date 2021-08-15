@@ -1,0 +1,497 @@
+*
+ {
+  margin: 0;
+  padding: 0;
+}
+
+.fp {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url(Elements/frontpg.png);
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  overflow: hidden;
+  z-index: 6;
+}
+
+h4 {
+  color: rgb(255, 255, 255);
+  width: 18%;
+  font-family: Verdana;
+  background-color: rgb(13, 13, 14);
+  opacity: 70%;
+  border: 5px solid rgb(255, 255, 255);
+  border-style: dotted;
+  font-size: 320%;
+}
+
+.back {
+  height: 100vh;
+  width: 100%;
+  background-image: url(Elements/wal1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  overflow: hidden;
+}
+.road {
+  height: 200px;
+  width: 500%;
+  display: block;
+  background-image: url(Elements/road.jpg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-repeat: repeat-x;
+  animation: road 5.5s linear infinite;
+  animation-delay: 0.5s;
+  animation-direction: normal;
+}
+
+@keyframes road {
+  100% {
+    transform: translateX(-3400px);
+  }
+}
+.city {
+  height: 250px;
+  width: 500%;
+  background-image: url(Elements/city.png);
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 1;
+  background-repeat: repeat-x;
+  animation: city 20s linear infinite;
+}
+@keyframes city {
+  100% {
+    transform: translateX(-1400px);
+  }
+}
+
+.car {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 2%;
+  z-index: 3;
+}
+.car img {
+  height: 265px;
+  width: 25%;
+  animation: car 1s linear infinite;
+}
+@keyframes car {
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  00% {
+    transform: translateY(-2px);
+  }
+}
+.wheel {
+  bottom: -93px;
+  position: absolute;
+  z-index: 3;
+  width: 99%;
+}
+
+.car2 {
+  position: absolute;
+  width: 56%;
+  bottom: 90px;
+  left: 16%;
+  z-index: 2;
+}
+
+.car2 img {
+  height: 265px;
+  width: 27%;
+  filter: drop-shadow(0em 2em 2em black);
+  animation: car2 5s linear infinite;
+}
+@keyframes car2 {
+  100% {
+    transform: translateY(-2px);
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateY(0px);
+    transform: translateX(0px);
+  }
+
+  00% {
+    transform: translateY(-2px);
+    transform: translateX(20px);
+  }
+}
+
+.car3 {
+  position: absolute;
+  width: 109%;
+  bottom: 25px;
+  left: 68%;
+  z-index: 2;
+}
+
+.car3 img {
+  height: 400px;
+  width: 18%;
+  filter: drop-shadow(0em 2em 2em black);
+  animation: car3 8s linear infinite;
+}
+@keyframes car3 {
+  100% {
+    transform: translateY(-2px);
+    transform: translateX(-12px);
+  }
+  50% {
+    transform: translateY(0px);
+    transform: translateX(00px);
+  }
+
+  00% {
+    transform: translateY(-2px);
+    transform: translateX(-12px);
+  }
+}
+
+.bike {
+  position: absolute;
+  width: 89%;
+  bottom: 101px;
+  left: 100%;
+  z-index: 2;
+}
+.bike img {
+  height: 239px;
+  width: 18%;
+  animation: bike 23s linear infinite;
+  filter: drop-shadow(0em 2em 2em black);
+}
+@keyframes bike {
+  00% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(-6000px);
+  }
+}
+.car4 {
+  width: 100%;
+  position: absolute;
+  bottom: -96px;
+  left: 32%;
+  z-index: 2;
+}
+.car4 img {
+  width: 26%;
+  height: 528px;
+  filter: drop-shadow(0em 2em 2em black);
+  animation: car4 49s linear infinite;
+}
+@keyframes car4 {
+  100% {
+    transform: translateY(-2px);
+    transform: translateX(280px);
+  }
+  50% {
+    transform: translateY(0px);
+    transform: translateX(00px);
+  }
+
+  00% {
+    transform: translateY(-2px);
+    transform: translateX(280px);
+  }
+}
+
+.wordsWrap {
+  margin-top: 2%;
+}
+
+.words span {
+  font-size: 60px;
+  letter-spacing: 1px;
+  color: #ecf0f1;
+}
+
+.bg {
+  background-color: #06d622;
+}
+
+.playerScore {
+  border: 3px white;
+  border-style: dashed;
+  position: absolute;
+  bottom: 91%;
+  z-index: 4;
+  right: 1%;
+  color: white;
+  font-family: cursive;
+  font-size: 214%;
+}
+
+.timer {
+  background-color: #ffffff8a;
+  border: outset;
+  position: absolute;
+  top: 4%;
+  right: 70%;
+  color: rgb(165 1 1);
+  font-family: fantasy;
+  font-size: 196%;
+}
+.Lp {
+  width: 100%;
+  height: 100%;
+  background-image: url(frontpg.png);
+  background-size: cover;
+  background-position: bottom;
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  z-index: 6;
+}
+.ballon {
+  position: relative;
+  right: -78%;
+  animation: ballon 15s linear infinite;
+}
+@keyframes ballon {
+  00% {
+    top: -10px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: -10px;
+  }
+}
+.ballon img {
+  width: 22%;
+  z-index: 3;
+  position: relative;
+  right: -2%;
+  bottom: -130px;
+}
+.wLeft {
+  position: relative;
+  right: -10%;
+  color: #000000;
+  font-family: fantasy;
+  z-index: 4;
+  font-size: 143%;
+  background-color: #27bed2;
+  width: 7%;
+  bottom: -70px;
+}
+
+.gName {
+  color: rgb(0 255 255);
+  font-family: Impact;
+  font-size: 70px;
+  background-color: #0a0a0aa6;
+  opacity: 100%;
+  width: 449px;
+  position: relative;
+  left: 41.8%;
+  top: 28%;
+}
+
+.devoloper {
+  background-color: aqua;
+  opacity: 100%;
+  font-size: 36px;
+  width: 595px;
+  font-family: cursive;
+  position: relative;
+  left: 35%;
+  text-align: center;
+  top: 31%;
+  border: 5px solid black;
+  border-style: double;
+}
+.diff {
+  opacity: 100%;
+  font-variant: petite-caps;
+  font-size: 48px;
+  font-family: fantasy;
+  position: relative;
+  left: 43%;
+  top: 34%;
+  color: #ffffff;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.btn1 {
+  background-color: rgb(255 255 255);
+  position: relative;
+  left: 42%;
+  border: outset 10px;
+  top: 37%;
+  width: 100px;
+  filter: drop-shadow(2px 4px 6px black);
+  font-size: 20px;
+}
+
+.btn2 {
+  background-color: rgb(161 243 105);
+  position: relative;
+  left: 45%;
+  border: outset 10px;
+  filter: drop-shadow(2px 4px 6px black);
+  top: 37%;
+  width: 100px;
+  font-size: 20px;
+}
+
+.btn3 {
+  background-color: rgb(226 100 0);
+  position: relative;
+  left: 48%;
+  border: outset 10px;
+  filter: drop-shadow(2px 4px 6px black);
+  top: 37%;
+  width: 100px;
+  font-size: 20px;
+}
+
+.endGamename {
+  border: dashed 3px #ffffff;
+  color: white;
+  background-color: #00000085;
+  font-family: Impact;
+  font-size: 70px;
+  opacity: 140%;
+  left: 42%;
+  text-align: center;
+}
+
+.res {
+  font-family: cursive;
+  font-size: 392%;
+  opacity: 140%;
+  filter: drop-shadow(2px 4px 6px black);
+  text-align: center;
+}
+
+.gameOver {
+  color: #ff0303;
+  font-family: fantasy;
+  font-size: 423%;
+  opacity: 100%;
+  text-align: center;
+  filter: drop-shadow(-2px 4px 8px black);
+}
+
+.scor {
+  opacity: 100%;
+  font-variant: petite-caps;
+  font-size: 306%;
+  font-family: fantasy;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.dificulty {
+  font-variant: petite-caps;
+  font-size: 308%;
+  font-family: fantasy;
+  position: relative;
+  color: #fcff5a;
+  text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.btn4 {
+  background-color: rgb(255 255 255);
+  position: relative;
+  left: 38%;
+  border: outset 10px;
+  width: 100px;
+  filter: drop-shadow(2px 4px 6px black);
+  font-size: 27px;
+}
+
+.btn5 {
+  background-color: rgb(161 243 105);
+  position: relative;
+  left: 42%;
+  border: outset 10px;
+  filter: drop-shadow(2px 4px 6px black);
+  width: 108px;
+  color: rgb(0, 0, 0);
+  font-size: 27px;
+}
+
+.btn6 {
+  background-color: rgb(226 100 0);
+  position: relative;
+  border: outset 10px;
+  left: 46%;
+  filter: drop-shadow(2px 4px 6px black);
+  width: 103px;
+  font-size: 27px;
+}
+
+@media screen and (max-width: 1350px) {
+  .car img {
+    height: 211px;
+    width: 28%;
+  }
+  .wheel {
+    bottom: -73px;
+  }
+  .car2 {
+    left: 20%;
+  }
+  .car3 {
+    left: 68%;
+  }
+  .car4 {
+    left: 39%;
+  }
+  .car2 img {
+    height: 205px;
+    width: 29%;
+  }
+  .car3 img {
+    height: 350px;
+    width: 21%;
+  }
+  .bike img {
+    height: 190px;
+  }
+  .car4 img {
+    height: 454px;
+    width: 30%;
+  }
+  .btn4 {
+    left: 33%;
+  }
+  .btn5 {
+    left: 38%;
+  }
+  .btn6 {
+    left: 44%;
+  }
+  .wLeft{
+    right: -9%;
+    font-size: 138%;
+    width: 10%;
+    bottom: -83px;
+  }
+}
