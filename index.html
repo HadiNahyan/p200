@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>typing car Racing-</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body style="overflow: hidden;">
+    <div class="fp" id="fp">
+      <p class="gName">> Typing Race <</p>
+          <p class="devoloper"> A Typing Game By Nahyan & Nadia </p>
+          <p class="diff"> Select Difficulty To Play </p>
+          <button type="button" class="btn1" id="easy">Easy</button>
+          <button type="button" id="normal" class="btn2">Normal</button>
+          <button type="button" id="hard" class="btn3">Hard</button>
+        </div>
+        <div class="back">
+          <img onclick="playAudio()" type="button" style="position: relative;left: 2%; top:3%;width:60px;z-index: 6;"src="Elements/musicLo.png" title="Play Music"></img>
+         <img onclick="pauseAudio()" type="button" style="position:relative;left: 3%; top:3%;width:60px;z-index: 6;"src="Elements/stMusic.png" title="Pause Music"></img>
+      <audio id="right">
+        <source src="Elements/right.mp3" type="audio/mp3">
+      </audio>
+      <audio id="wrong">
+        <source src="Elements/wrong.mp3" type="audio/mp3">
+      </audio>
+      <audio id="bgMusic" loop="true">
+        <source src="Elements/bcgMusic.mp3" type="audio/mp3">
+      </audio>
+      <audio id="speed">
+        <source src="Elements/speed.mp3" type="audio/mp3">
+      </audio>
+      <audio id="brake">
+        <source src="Elements/brake.mp3" type="audio/mp3">
+      </audio>
+      <audio id="garir" loop="true">
+        <source src="Elements/carSnd.mp3" type="audio/mp3">
+      </audio>
+      <audio id="crStrt">
+        <source src="Elements/gariStart.mp3" type="audio/mp3">
+      </audio>
+      <audio id="L10s">
+        <source src="Elements/After Effect - Countdown 10 seconds.mp3" type="audio/mp3">
+      </audio>
+      <audio id="won">
+        <source src="Elements/won.mp3" type="audio/mp3">
+      </audio>
+      <audio id="lost">
+        <source src="Elements/lost.mp3" type="audio/mp3">
+      </audio>
+      <audio id="kPres">
+        <source src="Elements/press2.mp3" type="audio/mp3">
+      </audio>
+      
+      <center>
+        <br>
+        <h4>
+          Typing Race
+        </h4>
+        <br>
+        <div class="wordsWrap">
+          <p class="words"></p>
+        </div>
+        </div>
+      </center>
+
+      <p class="playerScore"> Score: 0 </p>
+      <p class="timer">Time left: <span class="time">sec</span></p>
+    </div>
+    <div class="road">
+    </div>
+    <div class="city"></div>
+    <div class="car" id="myCar">
+      <img src="Elements/gari.png">
+      <div class="wheel" id="caka">
+        <img src="Elements/sakka.gif">
+      </div>
+    </div>
+    <div class="car2" id="car2">
+      <img src="Elements/giphy (3).gif" id='car2Anim'>
+    </div>
+    <div class="car3" id="car3">
+      <img src="Elements/giphy (2).gif" id='car3Anim'>
+    </div>
+    <div class="bike" id="bike">
+      <img src="Elements/bike.gif">
+    </div>
+    <div class="car4" id="car4">
+      <img src="Elements/giphy (1).gif" id='car2Anim'>
+    </div>
+    <div class="Lp" id="Lp"><br>
+      <p class="endGamename"> Typing Race <br></p>
+      <p class="gameOver"><br>> Game Over!! < </p>
+      <p class="res" id="res"> You Won!!! </p>
+      <p id="msg" class="scor">Your Score</p>
+      <p class="dificulty"> Select Difficulty To Play Again <br> <br></p>
+      <button type="button" id="easy2" class="btn4">Easy</button>
+      <button type="button" id="normal2" class="btn5">Normal</button>
+      <button type="button" id="hard2" class="btn6">Hard</button>
+    </div>
+    <div class="ballon"><img src="Elements/air_balloon_PNG19387.png" class="fLine">
+      <p class="wLeft" id=wLeft> Word Left- 30</p>
+    </div>
+
+    <script src="scirpt.js"></script>
+    <script src="allWords.js"></script>
+
+      </body>
+
+    </html>
