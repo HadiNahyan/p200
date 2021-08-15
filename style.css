@@ -255,7 +255,7 @@ h4 {
 .Lp {
   width: 100%;
   height: 100%;
-  background-image: url(frontpg.png);
+  background-image: url(Elements/frontpg.png);
   background-size: cover;
   background-position: bottom;
   display: none;
