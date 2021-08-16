@@ -313,12 +313,11 @@ h4 {
 .devoloper {
   background-color: aqua;
   opacity: 100%;
-  font-size: 36px;
-  width: 595px;
+  font-size: 230%;
+  width: 31%;
   font-family: cursive;
   position: relative;
-  left: 35%;
-  text-align: center;
+  left: 37%;
   top: 31%;
   border: 5px solid black;
   border-style: double;
@@ -494,4 +493,5 @@ h4 {
     width: 10%;
     bottom: -83px;
   }
+  .devoloper{width: 47%;}
 }
